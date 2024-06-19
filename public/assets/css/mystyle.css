@@ -1,0 +1,725 @@
+.my-classes-heading{
+    color: black !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+}
+.my-logo-h1{
+    position: relative;
+}
+.logo-text{
+    display: inline-block;
+    line-height: 12px !important;
+    position: absolute;
+    top: 9px;
+}
+.logo-text span{
+    font-size: 12px;
+    white-space: nowrap;
+    color: black !important;
+}
+
+.my-logo-img{
+    margin-right: 9px;
+}
+.my-row{
+    padding-bottom: 24px;
+}
+.my-box{
+    border-radius: 50px !important;
+    transition: 0.5s !important;
+}
+.my-box:hover{
+    box-shadow: 0 0 10px black;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.my-header{
+    border-bottom: 0.5px solid black !important;
+}
+.my-ul li a{
+    text-align: center !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+.my-hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0a6c42;
+}
+
+.my-hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0a6c42;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.my-hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0a6c42;
+    border-radius: 10px;
+
+}
+/* Handle */
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #075231;
+}
+
+.back-to-top:hover, .facebook-fixed:hover{
+    background: #3ac162 !important;
+    border: 0.1px solid black !important;
+}
+.back-to-top{
+    bottom: 65px !important;
+}
+.facebook-fixed{
+    background:#0a6c42 !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50px !important;
+    z-index: 996;
+    position: fixed !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    right: 15px;
+    bottom: 15px;
+}
+
+.facebook-fixed i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 1;
+}
+.facebook{
+    border: 0.1px solid #0a6c42 !important;
+}
+.facebook:hover{
+    border: 0.1px solid black !important;
+}
+
+.my-subject-title{
+    padding-top: 60px;
+}
+.my-class-title{
+    padding-top: 40px;
+    padding-bottom: 20px !important;
+}
+
+.my-class-row{
+    justify-content: center;
+}
+
+.my-purecounter{
+    font-size: 34px !important;
+}
+.my-class-count-section{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin-top: 30px !important;
+}
+
+.my-student-ul{
+    margin-left: 50px;
+}
+.my-box-container{
+    padding-bottom: 24px !important;
+}
+.my-box-container div{
+    border-radius: 50px !important;
+    border: 0.5px solid black !important;
+    pointer-events: auto !important;
+    height:400px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 26px;
+    text-transform: uppercase !important;
+    background: #fff !important;
+    color: #0a6c42 !important;
+    transition: 0.5s !important;
+    cursor: pointer !important;
+}
+
+.my-box-container div:hover{
+    background: #0a6c42 !important;
+    color: #fff !important;
+    transform: scale(1.07, 1.07);
+}
+
+.my-competition-box{
+    border-radius: 50px !important;
+    border: 0.5px solid black !important;
+    pointer-events: auto !important;
+    transition: 0.5s !important;
+}
+.my-competition-box-cards{
+    border-radius: 50px !important;
+    border: 0.5px solid black !important;
+    pointer-events: auto !important;
+    transition: 0.5s !important;
+    margin-bottom: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+
+}
+
+.my-competition-heading{
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    color: black !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+}
+
+.my-competition-notfound{
+    color: red !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+}
+
+.row my-competitions-row{
+    padding-bottom: 24px !important;
+}
+
+.my-dropdown ul{
+    right: 0 !important;
+    border: 1px solid black !important;
+
+}
+.my-dropdown ul li{
+    border-top: 1px solid #fff !important;
+    border-bottom: 1px solid #fff !important;
+}
+
+.my-dropdown ul li:hover{
+    box-sizing: border-box !important;
+    border-top: 1px solid black !important;
+    border-bottom: 1px solid black !important;
+}
+
+.my-diploamthese-box{
+    border-radius: 50px !important;
+    border: 0.5px solid black !important;
+    pointer-events: auto !important;
+    transition: 0.5s !important;
+    margin-bottom: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+}
+.my-diploamthese-heading{
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    color: black !important;
+    text-transform: uppercase !important;
+    font-size: 28px !important;
+}
+.my-diploamthese-box-student{
+    min-height: 50px !important;
+    max-height: fit-content !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.my-diploamthese-box-student h3{
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
+.my-diploamthese-box-content{
+    min-height: fit-content !important;
+    flex: auto !important;
+}
+.my-diploamthese-box-bottom{
+    min-height: 60px !important;
+    max-height: fit-content !important;
+}
+.my-diploamthese-box-content-guest{
+    min-height: fit-content !important;
+    flex: auto !important;
+}
+
+.my-diploamthese-box-content-title{
+    margin-top: 10px;
+}
+.my-diploamthese-box-content-teacher{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*height: 30% !important;*/
+}
+.my-diploamthese-box-content-theme{
+    margin-bottom: 10px;
+}
+/*Competitions*/
+.my-competition-box-student{
+    min-height: 75px !important;
+    max-height: fit-content !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.my-competition-box-student h3{
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
+.my-competition-box-content{
+    min-height: fit-content !important;
+    flex: auto !important;
+}
+
+.my-competition-box-bottom{
+    min-height: 75px !important;
+    max-height: fit-content !important;
+}
+
+.my-competition-box-content-guest{
+    min-height: fit-content !important;
+    flex: auto !important;
+}
+
+.my-competition-box-content-title{
+    margin-top: 10px;
+}
+.my-competition-box-content-teacher{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.my-competition-box-content-theme{
+    margin-bottom: 10px;
+}
+.pricing h3{
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.pricing .btn-wrap{
+    margin-top: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.my-competition-h3{
+    padding-bottom: 30px !important;
+}
+
+.select2{
+    width: 60% !important;
+}
+.select2-selection{
+    border-color: #0a6c42 !important;
+    height: 37px !important;
+}
+.select2-dropdown{
+    border-color: #0a6c42 !important;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color: #0a6c42 !important;
+}
+.select2-selection__choice{
+    background-color: #f4f6f9 !important;
+    color: #000 !important;
+    display: flex !important;
+    justify-content:center !important;
+    align-items: center !important;
+}
+.select2-selection__choice__remove{
+    font-size: 24px !important;
+    line-height: 22px !important;
+    color: red !important;
+}
+.select2-selection__choice__remove:hover{
+    -webkit-text-stroke: 0.75px black;
+}
+.navbar-expand .navbar-nav{
+    align-items: center;
+}
+.content-wrapper{
+    min-height: 100% !important;
+}
+.my-search-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px
+}
+.my-search-btn{
+    background-color: #0a6c42 !important;
+    color: #fff !important;
+    border-radius: 50px !important;
+    width: 30%;
+    height: 37px;
+    border: 0.5px solid black;
+}
+
+.my-search-btn:hover{
+    background-color: #075231 !important;
+}
+.select-contaner{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important
+}
+.select-h5{
+    text-align: center
+}
+.my-class-heading{
+    font-size: 36px !important;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    margin-top: 50px !important;
+    margin-bottom: 20px !important;
+    color: black !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+}
+#currrently-visible-diplomatheses{
+    border-left: 1px solid black !important;
+    padding-left: 20px !important;
+}
+.my-left-list-class{
+    float: left !important;
+    padding-right: 20px;
+}
+#chb-class{
+    margin-left: 20px !important;
+}
+#chb-topic{
+    margin-left: 20px !important;
+}
+#chb-class-parent{
+    background: #f8f8f8 !important;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black !important;
+}
+
+#chb-topic-parent{
+    background: #f8f8f8 !important;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black !important;
+}
+#visibleTopics:last-child{
+    margin-bottom: 20px !important;
+}
+
+#visibleClasses:last-child{
+    margin-bottom: 20px !important;
+}
+
+.my-cursor{
+    cursor: pointer !important;
+}
+.my-logged-in{
+    border: 1px solid black !important;
+    border-radius: 50px;
+}
+.my-logged-in:hover{
+    border-radius: 25px 25px 0px 0px;
+}
+.my-logged-in ul{
+    right: 0 !important;
+}
+.my-logged-in ul{
+    border: 1px solid black !important;
+}
+.my-logged-in ul li{
+    border-top: 1px solid #fff !important;
+    border-bottom: 1px solid #fff !important;
+}
+
+.my-logged-in ul li:hover{
+    box-sizing: border-box !important;
+    border-top: 1px solid black !important;
+    border-bottom: 1px solid black !important;
+}
+.navbar .dropdown ul{
+    left: unset !important;
+}
+.p-abs{
+    position: relative !important;
+}
+.p-rel{
+    margin-left: 0 !important;
+    position: absolute !important;
+    right: 25px !important;
+    bottom: -70px !important;
+}
+
+#document #toolbar{
+    display: none !important;
+}
+
+#toolbar:host {
+    display: none !important;
+}
+
+viewer-toolbar{
+    display: none !important;
+}
+#toolbar{
+    display: none !important;
+}
+.slider {
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+.slider .parent-slide {
+    padding: 15px;
+}
+.slider img {
+    display: block;
+    margin: auto;
+}
+.slick-arrow{
+    background: black !important;
+}
+
+.my-partner{
+    width: 100% !important;
+}
+.my-partner-image{
+    margin: 0 !important;
+    margin-right: 20px !important;
+}
+
+.slider{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.slider .icon-box h3 a{
+    pointer-events: none !important;
+}
+
+input[type="checkbox"]{
+    cursor: pointer !important;
+}
+.form-check-input:checked {
+    background-color: #0a6c42;
+    border-color: #9dccb6 !important;
+}
+.form-check-input:focus {
+    border-color: #9dccb6 !important;
+    box-shadow: 0 0 0 0.25rem #9dccb6;
+}
+
+.my-news{
+    cursor: pointer !important;
+}
+.my-subjects h3 a{
+    pointer-events: none !important;
+}
+.my-subjects .icon-box img{
+    margin-right: 20px !important;
+}
+
+.my-img-marging{
+    margin-right: 20px !important;
+}
+
+#embed-container{
+    position: absolute !important;
+    background: red;
+    opacity: 25%;
+    width: 750px;
+    height: 400px;
+    top: 85px;
+    left: 16px;
+    z-index: 1055;
+}
+.news-spetial-a{
+    pointer-events:none !important;
+}
+.modal-dialog{
+    pointer-events: all;
+}
+
+#showHideClasses h5{
+    margin: 0;
+}
+#showHideTopics h5{
+    margin: 0;
+}
+#showHideClasses{
+    padding: 20px;
+}
+#showHideTopics{
+    padding: 20px;
+}
+.rotated{
+    transform: rotate(90deg);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.my-student-section-title{
+    padding-bottom: 0 !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+
+}
+.my-mobile-login-btn{
+    width: 30px;
+    height: 35px;
+    display: none;
+}
+div.my-competition-title-selected{
+    background: #0a6c42 !important;
+    color: #fff !important;
+}
+
+#remove-filter{
+    color: #B81B00;
+    background: #f8f8f8 !important;
+     padding: 10px 20px 10px !important;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black !important;
+    transition: 0.7s !important;
+
+}
+#remove-filter:hover{
+    color: #f8f8f8;
+    background: #B81B00 !important;
+}
+#header .social-links a{
+    font-size: 18px;
+    display: inline-block;
+    background: #0a6c42;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+.js-cookie-consent{
+    position: fixed;
+    bottom: 0;
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    background-color:#ffffff;
+    border-top: 1px solid black ;
+
+}
+.cookie-consent__message{
+    color: #37423b !important;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px !important;
+    margin-bottom: 0px !important;
+    margin-right: 20px !important;
+}
+.js-cookie-consent-agree{
+    border-radius: 50px;
+    border: 1px solid #198754 !important;
+    font-family: "Open Sans", sans-serif;
+    background-color: #0a6c42 !important;
+    color: #fff !important;
+    transition: 0.5s;
+}
+.js-cookie-consent-agree:hover{
+    background: #3ac162 !important;
+}
+#hero{
+    background: url(../img/hero.png) top center !important;
+    height: 100vh !important;
+}
+#hero h1{
+    text-shadow: 8px 6px 6px #000;
+}
+
+#hero h2{
+    text-shadow: 8px 6px 6px #000;
+}
+
+#hero:before{
+    border-bottom: 1px solid black;
+}
+
+@media(max-width:990.4px){
+    .my-hover-underline-animation{
+        display: inherit !important;
+        width: fit-content;
+    }
+    #my-cookie-display{
+        flex-direction: column !important;
+    }
+    .cookie-consent__message{
+        margin-bottom: 8px !important;
+        margin-right: 0 !important;
+    }
+
+    #hero{
+        background: url(../img/hero_990.png) top center !important;
+    }
+}
+@media(max-width:768px){
+    .my-subjects{
+        height: 470px;
+        overflow: scroll;
+    }
+    #remove-filter {
+        width: 100%;
+        text-align: left;
+    }
+    .form-check-input{
+        width: 1.25em;
+        height: 1.25em;
+    }
+    #chb-class label, #chb-topic label{
+        font-size: 18px;
+    }
+    #chb-class, #chb-topic{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #currrently-visible-diplomatheses{
+        padding-left: unset !important;
+    }
+    .section-title p{
+        font-size: 28px;
+    }
+    #hero{
+        background: url(../img/hero_768.png) top center !important;
+    }
+}
+
