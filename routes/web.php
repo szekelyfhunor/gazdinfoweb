@@ -60,7 +60,7 @@ Route::get('/auth/google', [GoogleController::class, 'redirect'])->name('google-
 Route::get('/auth/google/call-back', [GoogleController::class, 'callback']);
 
 //----------------------------------------------PROGRAMS-------------------------------------------------------------------
-Route::group([/*'middleware' => 'is_admin',*/ 'prefix' => 'admin/programs'], function () {
+Route::group(['middleware' => 'is_admin', 'prefix' => 'admin/programs'], function () {
 
     Route::get('', [ProgramController::class, 'index'])->name('dashboard.programs.index');
 
@@ -77,7 +77,7 @@ Route::group([/*'middleware' => 'is_admin',*/ 'prefix' => 'admin/programs'], fun
 
 
 //----------------------------------------------CLASSES-------------------------------------------------------------------
-Route::group([/*'middleware' => 'is_admin',*/ 'prefix' => 'admin/classes'], function () {
+Route::group(['middleware' => 'is_admin', 'prefix' => 'admin/classes'], function () {
 
     Route::get('', [ClassController::class, 'index'])->name('dashboard.classes.index');
 
@@ -95,7 +95,7 @@ Route::group([/*'middleware' => 'is_admin',*/ 'prefix' => 'admin/classes'], func
 
 //----------------------------------------------ITKLUB-------------------------------------------------------------------
 
-Route::group([/*'middleware' => 'is_admin',*/ 'prefix' => 'admin/itKlub'], function () {
+Route::group(['middleware' => 'is_admin', 'prefix' => 'admin/itKlub'], function () {
     Route::get('', [ItKlubController::class, 'index'])->name('dashboard.itklub.index');
 
 
@@ -116,7 +116,7 @@ Route::group([/*'middleware' => 'is_admin',*/ 'prefix' => 'admin/itKlub'], funct
 //-----------------------------------------------NEWS-------------------------------------------------------------------
 
 
-Route::group([/*'middleware' => 'admin_or_teacher',*/ 'prefix' => 'admin/news'], function () {
+Route::group(['middleware' => 'admin_or_teacher', 'prefix' => 'admin/news'], function () {
     Route::get('', [NewController::class, 'index'])->name('dashboard.news.index');
 
     Route::get('/create', [NewController::class, 'create'])->name('dashboard.news.create');
@@ -134,7 +134,7 @@ Route::group([/*'middleware' => 'admin_or_teacher',*/ 'prefix' => 'admin/news'],
 
 //-------------------------------------------------USERS-------------------------------------------------------------------
 
-Route::group([/*'middleware' => 'is_admin',*/ 'prefix' => 'admin/users'], function () {
+Route::group(['middleware' => 'is_admin', 'prefix' => 'admin/users'], function () {
     Route::get('', [UserController::class, 'index'])->name('dashboard.users.index');
 
     Route::get('/create', [UserController::class, 'create'])->name('dashboard.users.create');
@@ -158,7 +158,7 @@ Route::group(['middleware' => 'is_super_admin', 'prefix' => 'admin/changepasswor
 
 
 //------------------------------------------COMPETITIONS-------------------------------------------------------------------
-Route::group([/*'middleware' => 'admin_or_teacher',*/ 'prefix' => '/admin/competitions'], function () {
+Route::group(['middleware' => 'admin_or_teacher', 'prefix' => '/admin/competitions'], function () {
 
     /*COMPETITIONS*/
     Route::get('', [CompetitionController::class, 'index'])->name('dashboard.competitions.index');
@@ -178,7 +178,7 @@ Route::group([/*'middleware' => 'admin_or_teacher',*/ 'prefix' => '/admin/compet
 //------------------------------------------DIPLOMA THESES-------------------------------------------------------------------
 
 /*DIPLOMA THESES*/
-Route::group([/*'middleware' => 'admin_or_teacher',*/ 'prefix' => 'admin/diplomatheses'], function () {
+Route::group(['middleware' => 'admin_or_teacher', 'prefix' => 'admin/diplomatheses'], function () {
     Route::get('', [DiplomaThesisController::class, 'index'])->name('dashboard.diplomatheses.index');
 
     Route::get('/create', [DiplomaThesisController::class, 'create'])->name('dashboard.diplomatheses.create');
@@ -202,7 +202,7 @@ Route::group([/*'middleware' => 'admin_or_teacher',*/ 'prefix' => 'admin/diploma
 
 //------------------------------------------TYPE OF PARTICIPATIONS-------------------------------------------------------------------
 
-Route::group([/*'middleware' => 'admin_or_teacher',*/ 'prefix' => 'admin/typeofparticipations'], function () {
+Route::group(['middleware' => 'admin_or_teacher', 'prefix' => 'admin/typeofparticipations'], function () {
     Route::get('', [TypeOfParticipationController::class, 'index'])->name('dashboard.typeofparticipations.index');
 
     Route::get('/create', [TypeOfParticipationController::class, 'create'])->name('dashboard.typeofparticipations.create');
@@ -220,7 +220,7 @@ Route::group([/*'middleware' => 'admin_or_teacher',*/ 'prefix' => 'admin/typeofp
 
 //-------------------------------------------------TOPICS-------------------------------------------------------------------
 
-Route::group([/*'middleware' => 'admin_or_teacher',*/ 'prefix' => 'admin/topics'], function () {
+Route::group(['middleware' => 'admin_or_teacher', 'prefix' => 'admin/topics'], function () {
 
     Route::get('', [TopicController::class, 'index'])->name('dashboard.topics.index');
 
@@ -236,7 +236,7 @@ Route::group([/*'middleware' => 'admin_or_teacher',*/ 'prefix' => 'admin/topics'
 
 //-------------------------------------------------Reviews-------------------------------------------------------------------
 
-Route::group([/*'middleware' => 'is_admin',*/ 'prefix' => 'admin/reviews'], function () {
+Route::group(['middleware' => 'is_admin', 'prefix' => 'admin/reviews'], function () {
 
     Route::get('', [ReviewController::class, 'index'])->name('dashboard.reviews.index');
 
@@ -253,7 +253,7 @@ Route::group([/*'middleware' => 'is_admin',*/ 'prefix' => 'admin/reviews'], func
 
 //-------------------------------------------------Partners-------------------------------------------------------------------
 
-Route::group([/*'middleware' => 'is_admin',*/ 'prefix' => 'admin/partners'], function () {
+Route::group(['middleware' => 'is_admin', 'prefix' => 'admin/partners'], function () {
 
     Route::get('', [PartnerController::class, 'index'])->name('dashboard.partners.index');
 
@@ -270,7 +270,7 @@ Route::group([/*'middleware' => 'is_admin',*/ 'prefix' => 'admin/partners'], fun
 
 //-------------------------------------------------Partners-------------------------------------------------------------------
 
-Route::group([/*'middleware' => 'is_admin',*/ 'prefix' => 'admin/subjects'], function () {
+Route::group(['middleware' => 'is_admin', 'prefix' => 'admin/subjects'], function () {
 
     Route::get('', [SubjectController::class, 'index'])->name('dashboard.subjects.index');
 

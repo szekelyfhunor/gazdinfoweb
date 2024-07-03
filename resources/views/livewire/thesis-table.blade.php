@@ -12,8 +12,8 @@
                                 <tr>
                                     <th class="text-center align-middle" wire:click="setSortBy('title')" style="cursor: pointer;">Cím <i class="bi bi-arrow-down-up"></i></th>
                                     <th class="text-center align-middle">Leírás</th>
-                                    <th class="text-center align-middle" wire:click="setSortBy('topics')" style="cursor: pointer;">Témakörök <i class="bi bi-arrow-down-up"></i></th>
-                                    <th class="text-center align-middle" wire:click="setSortBy('teachers')" style="cursor: pointer;">Témavezetők <i class="bi bi-arrow-down-up"></i></th>
+                                    <th class="text-center align-middle">Témakörök</th>
+                                    <th class="text-center align-middle">Témavezetők</i></th>
                                     <th class="text-center align-middle">Jelentkezés</th>
                                 </tr>
                             </thead>
@@ -25,9 +25,9 @@
                                     <td class="text-center align-middle">
                                         @foreach ($thesis->topics as $topic)
                                         {{ $topic->name }}
-                                        @if (!$loop->last)
-                                        {{ ',' }}
-                                        @endif
+                                            @if (!$loop->last)
+                                            {{ ',' }}
+                                            @endif
                                         @endforeach
                                     </td>
                                     <td class="text-center align-middle">

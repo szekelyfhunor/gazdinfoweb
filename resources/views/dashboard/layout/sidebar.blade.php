@@ -13,7 +13,7 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
+                @hasrole('SzuperAdminisztrátor|Adminisztrátor')
                 <li class="nav-item menu-closed">
                     <a href="{{ route('dashboard.programs.index') }}"
                        class="nav-link {{ (request()->is('dashboard/program*')) ? 'active' : '' }}">
@@ -23,7 +23,9 @@
                         </p>
                     </a>
                 </li>
+                @endhasrole
 
+                @hasrole('SzuperAdminisztrátor|Adminisztrátor')
                 <li class="nav-item menu-closed">
                     <a href="{{ route('dashboard.classes.index') }}"
                        class="nav-link {{ (request()->is('dashboard/classes*')) ? 'active' : '' }}">
@@ -33,7 +35,8 @@
                         </p>
                     </a>
                 </li>
-
+                @endhasrole
+                @hasrole('SzuperAdminisztrátor|Adminisztrátor')
                 <li class="nav-item menu-closed">
                     <a href="{{ route('dashboard.itklub.index') }}"
                        class="nav-link {{ (request()->is('dashboard/itklub*')) ? 'active' : '' }}">
@@ -43,7 +46,8 @@
                         </p>
                     </a>
                 </li>
-
+                @endhasrole
+                @hasanyrole('SzuperAdminisztrátor|Adminisztrátor|Tanár')
                 <li class="nav-item menu-closed">
                     <a href="{{ route('dashboard.news.index') }}"
                        class="nav-link {{ (request()->is('dashboard/news*')) ? 'active' : '' }}">
@@ -54,7 +58,8 @@
                         </p>
                     </a>
                 </li>
-
+                @endhasanyrole
+                @hasrole('SzuperAdminisztrátor|Adminisztrátor')
                 <li class="nav-item menu-closed">
                     <a href="{{ route('dashboard.reviews.index') }}"
                        class="nav-link {{ (request()->is('dashboard/reviews*')) ? 'active' : '' }}">
@@ -64,7 +69,8 @@
                         </p>
                     </a>
                 </li>
-
+                @endhasrole
+                @hasrole('SzuperAdminisztrátor|Adminisztrátor')
                 <li class="nav-item menu-closed">
                     <a href="{{ route('dashboard.partners.index') }}"
                        class="nav-link {{ (request()->is('dashboard/partners*')) ? 'active' : '' }}">
@@ -74,7 +80,8 @@
                         </p>
                     </a>
                 </li>
-
+                @endhasrole
+                @hasrole('SzuperAdminisztrátor|Adminisztrátor')
                 <li class="nav-item menu-closed">
                     <a href="{{ route('dashboard.subjects.index') }}"
                        class="nav-link {{ (request()->is('dashboard/subjects*')) ? 'active' : '' }}">
@@ -84,7 +91,9 @@
                         </p>
                     </a>
                 </li>
+                @endhasrole
 
+                @hasanyrole('SzuperAdminisztrátor|Adminisztrátor|Tanár')
                 <li class="nav-item has-treeview {{ (request()->is('dashboard/typeOfParticipations*')) ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link {{ (request()->is('dashboard/typeOfParticipations*')) ? 'active' : '' }}">
                         <i class="fas fa-plus"></i>
@@ -110,7 +119,9 @@
                         </li>
                     </ul>
                 </li>
+                @endhasanyrole
 
+                @hasanyrole('SzuperAdminisztrátor|Adminisztrátor|Tanár')
                 <li class="nav-item has-treeview {{ (request()->is('dashboard/diplomatheses*')) ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link {{ (request()->is('dashboard/diplomatheses*')) ? 'active' : '' }}">
                         <i class="fas fa-scroll"></i>
@@ -137,7 +148,8 @@
                         </li>
                     </ul>
                 </li>
-
+                @endhasanyrole
+                @hasrole('SzuperAdminisztrátor|Adminisztrátor')
                 <li class="nav-item menu-closed">
                     <a href="{{ route('dashboard.users.index') }}"
                        class="nav-link">
@@ -147,7 +159,8 @@
                         </p>
                     </a>
                 </li>
-
+                @endhasrole
+                @hasanyrole('SzuperAdminisztrátor|Adminisztrátor|Tanár')
                 <li class="nav-item menu-closed">
                     <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
@@ -160,6 +173,7 @@
                         @csrf
                     </form>
                 </li>
+                @endhasanyrole
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

@@ -37,6 +37,7 @@
                         <table class="table table-bordered table-hover my-table">
                             <thead class="my-table-header">
                             <tr>
+                                <th class="text-center align-middle">Hallgató</th>
                                 <th class="text-center align-middle">Cím</th>
                                 <th class="text-center align-middle">Leírás</th>
                                 <th class="text-center align-middle">Témakör</th>
@@ -47,6 +48,7 @@
                             <tbody class="my-table-body">
                             @foreach($diplomatheses as $diplomathese)
                                 <tr>
+                                    <td class="text-center">{{ $diplomathese->student->user->name ?? ' ' }}</td>
                                     <td class="text-center">{{ $diplomathese->title }}</td>
                                     <td>{{ $diplomathese->abstract }}</td>
                                     <td>

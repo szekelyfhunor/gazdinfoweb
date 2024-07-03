@@ -57,9 +57,12 @@
                                                 @elseif($applicant->status === 'accepted') badge-success 
                                                 @elseif($applicant->status === 'rejected') badge-danger 
                                                 @endif">
-                                                {{ $applicant->status }}
+                                                @if($applicant->status === 'pending') Folyamatban
+                                                @elseif($applicant->status === 'accepted') Elfogadva
+                                                @elseif($applicant->status === 'rejected') Elutasítva
+                                                @endif
                                             </span>
-                                        </td>                                        
+                                        </td>                                                                                
                                         <td class="text-center">{{ $applicant->created_at }}</td>
                                         <td class="text-center text-nowrap">
                                             <form action="{{ route('accept', $applicant->id) }}" method="POST">

@@ -55,5 +55,17 @@ class DiplomaThesis extends Model implements HasMedia
         $this->status = 'accepted';
         $this->save();
     }
+
+    public function reject()
+    {
+        $this->status = 'rejected';
+        $this->save();
+    }
+
+    public function pending()
+    {
+        $this->status = 'pending';
+        $this->save();
+    }
 }
 

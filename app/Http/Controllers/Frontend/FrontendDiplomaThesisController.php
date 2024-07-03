@@ -24,24 +24,24 @@ class FrontendDiplomaThesisController extends Controller
             }
             return true;
         });
-        $allTopics = Topic::with('diplomatheses.topics')->get();
+        $allTopics = Topic::all();
         $topics = $allTopics->filter(function ($topic) {
             foreach ($topic->diplomatheses as $diplomathesis) {
-                foreach ($diplomathesis->topics as $dtTopic) {
-                    if ($dtTopic->id === $topic->id) {
-                        return false;
+                if ($diplomathesis->status === 'accepted') {
+                    foreach ($diplomathesis->topics as $dtTopic) {
+                        if ($dtTopic->id === $topic->id) {
+                            return true; // Include the topic if it is associated with any diploma thesis with 'accepted' status
+                        }
                     }
                 }
             }
-            return true;
+            return false; // Exclude the topic if it is not associated with any diploma thesis with 'accepted' status
         });
 
-        $diplomatheses = DiplomaThesis::all();
 
-        if (!isset($diplomatheses->topics)) {
-            dd('Topics relationship is not set on diplomathesis:', $diplomatheses);
-        }
-        
+        //dd($topics);
+
+        $diplomatheses = DiplomaThesis::whereNotNull('student_id')->get();
 
         return view('frontend.diplomatheses.index', compact('classes','diplomatheses', 'topics'));
     }

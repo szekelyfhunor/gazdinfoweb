@@ -42,11 +42,23 @@ class ApplicantsForThesesController extends Controller
             return redirect()->back();
         }
 
+        $students = $applicant->student; // Retrieve the associated Student models
+
+        if ($students->isEmpty()) {
+            session()->flash('error', 'No students found for this applicant.');
+            return redirect()->back();
+        }
+
         $applicant->accept();
 
-        foreach ($applicant->diplomaTheses as $diplomaThesis) {
-            $diplomaThesis->status = 'accepted';
-            $diplomaThesis->save();
+        foreach ($students as $student) {
+            $studentId = $student->id;
+
+            foreach ($applicant->diplomaTheses as $diplomaThesis) {
+                $diplomaThesis->student_id = $studentId;
+                $diplomaThesis->accept();
+                $diplomaThesis->save(); 
+            }
         }
         
         Mail::to('szekelyfhunor@uni.sapientia.ro')->send(new ApplicantStatusMail($applicant, 'accepted'));
@@ -55,6 +67,7 @@ class ApplicantsForThesesController extends Controller
 
         return redirect()->back();
     }
+
 
 
     public function reject($id)
@@ -67,6 +80,10 @@ class ApplicantsForThesesController extends Controller
         }
 
         $applicant->reject();
+
+        foreach ($applicant->diplomaTheses as $diplomaThesis) {
+            $diplomaThesis->pending();
+        }
         
         Mail::to('szekelyfhunor@uni.sapientia.ro')->send(new ApplicantStatusMail($applicant, 'rejected'));
 

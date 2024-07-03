@@ -29,7 +29,8 @@ class Student extends Model
     
     public function diplomathese()
     {
-        return $this->hasMany(DiplomaThesis::class, 'student_id');
+        //return $this->hasMany(DiplomaThesis::class, 'student_id');
+        return $this->hasOne(DiplomaThesis::class, 'student_id');
     }
 
     /**

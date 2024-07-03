@@ -19,25 +19,12 @@ class ThesisTable extends Component
 
     public function render()
     {
-        $diplomaTheses = DiplomaThesis::with(['topics', 'teacher.user'])
-            ->where(function($query) {
-                $query->where('title', 'like', '%' . $this->search . '%')
-                      ->orWhere('abstract', 'like', '%' . $this->search . '%');
-            })
-            ->when($this->sortBy === 'topics', function($query) {
-                $query->withCount('topics')->orderBy('topics_count', $this->sortDir);
-            })
-            ->when($this->sortBy === 'teachers', function($query) {
-                $query->withCount('teacher')->orderBy('teacher_count', $this->sortDir);
-            })
-            ->when(!in_array($this->sortBy, ['topics', 'teachers']), function($query) {
-                $query->orderBy($this->sortBy, $this->sortDir);
-            })
-            ->paginate($this->perPage);
-
+        
         return view('livewire.thesis-table', [
             'users' => User::all(),
-            'diplomaTheses' => $diplomaTheses,
+            'diplomaTheses' => DiplomaThesis::search($this->search)
+            ->orderBy($this->sortBy, $this->sortDir)
+            ->paginate($this->perPage),
         ]);
     }
 

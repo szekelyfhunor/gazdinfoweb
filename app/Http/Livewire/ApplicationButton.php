@@ -60,6 +60,24 @@ class ApplicationButton extends Component
             return redirect()->route('google-auth')->with('error', 'A művelet végrehajtásához be kell jelentkeznie.');
         }
 
+        $applicants = Applicants::whereHas('student', function ($query) use ($user) {
+            $query->where('user_id', $user->id);
+        })
+        ->whereHas('diplomaTheses', function ($query) {
+            $query->where('id', $this->thesisId);
+        })
+        ->get();
+
+        foreach ($applicants as $applicant) {
+            foreach ($applicant->diplomaTheses as $diplomaThesis) {
+                if ($diplomaThesis->id === $this->thesisId) {
+                    $diplomaThesis->status = 'pending';
+                    $diplomaThesis->student_id = NULL;
+                    $diplomaThesis->save();
+                }
+            }
+        }
+
         Applicants::whereHas('student', function ($query) use ($user) {
                 $query->where('user_id', $user->id);
             })
